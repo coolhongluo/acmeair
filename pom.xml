@@ -30,7 +30,10 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
+                <dependency>
+                    <groupId>com.huawei.paas.cse</groupId>
+                    <artifactId>foundation-config-cc</artifactId>
+                </dependency>
     <dependencies>
         <dependency>
             <groupId>io.servicecomb</groupId>
