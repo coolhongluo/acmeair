@@ -30,10 +30,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-                <dependency>
-                    <groupId>com.huawei.paas.cse</groupId>
-                    <artifactId>foundation-config-cc</artifactId>
-                </dependency>
+
     <dependencies>
         <dependency>
             <groupId>io.servicecomb</groupId>
@@ -59,7 +56,10 @@
             <groupId>com.huawei.paas.cse</groupId>
             <artifactId>cse-handler-tracing</artifactId>
         </dependency>
-
+                <dependency>
+                    <groupId>com.huawei.paas.cse</groupId>
+                    <artifactId>foundation-config-cc</artifactId>
+                </dependency>
         <dependency>
             <groupId>com.huawei.paas.cse</groupId>
             <artifactId>cse-handler-tcc</artifactId>
@@ -79,7 +79,7 @@
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
-            <version>2.9.9</version>
+            <version>2.9.9</version><!--$NO-MVN-MAN-VER$-->
         </dependency>
     </dependencies>
 
@@ -120,6 +120,41 @@
                 </configuration>
             </plugin>
         </plugins>
+        <pluginManagement>
+        	<plugins>
+        		<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+        		<plugin>
+        			<groupId>org.eclipse.m2e</groupId>
+        			<artifactId>lifecycle-mapping</artifactId>
+        			<version>1.0.0</version>
+        			<configuration>
+        				<lifecycleMappingMetadata>
+        					<pluginExecutions>
+        						<pluginExecution>
+        							<pluginExecutionFilter>
+        								<groupId>
+        									org.apache.maven.plugins
+        								</groupId>
+        								<artifactId>
+        									maven-compiler-plugin
+        								</artifactId>
+        								<versionRange>
+        									[3.1,)
+        								</versionRange>
+        								<goals>
+        									<goal>testCompile</goal>
+        								</goals>
+        							</pluginExecutionFilter>
+        							<action>
+        								<ignore></ignore>
+        							</action>
+        						</pluginExecution>
+        					</pluginExecutions>
+        				</lifecycleMappingMetadata>
+        			</configuration>
+        		</plugin>
+        	</plugins>
+        </pluginManagement>
     </build>
 </project>
 
